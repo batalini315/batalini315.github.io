@@ -5,11 +5,11 @@
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 </script>
 	</head>
-		<div class="as1"> Привет, github-test</div>
 
 	<body>
 		
-		
+		<div class="as1"> Привет, github-test</div>
+php		
 		
 		
 		
