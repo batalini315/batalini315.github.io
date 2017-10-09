@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Тестовый html</title>
+		<title>Тестовый php</title>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 </script>
