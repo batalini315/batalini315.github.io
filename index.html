@@ -1,11 +1,13 @@
 <html>
 	<head>
 		<title>Тестовый html</title>
-		<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/slide.css" rel="stylesheet">
-		<script type="text/javascript" src="js/script.js"></script>
-		<script type="text/javascript" src="js/slide.js"></script>
+		<script type="text/javascript" src="js/slide2.js" ></script>
+		
+		<script type="text/javascript" src="js/script.js" defer></script>
+		
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 </script>
 	</head>
@@ -13,7 +15,7 @@
 
 	<body>
 		<div class="as1"> Привет, github-test</div>
-		
+		<button id="ener">Стереть</button>
     <div id="block-for-slider">
         <div id="viewport">
             <ul id="slidewrapper">
@@ -22,9 +24,47 @@
                 <li class="slide"><img src="img/3.jpg" alt="3" class="slide-img"></li>
                 <li class="slide"><img src="img/4.jpg" alt="4" class="slide-img"></li>
             </ul>
+			<div id="prev-next-btns">
+                <div id="prev-btn"></div>
+                <div id="next-btn"></div>
+            </div>
         </div>
     </div>
+<script type="text/javascript" >
 	
+	var slideNow = 1;
+	var slideCount = $('#slidewrapper').children().length();
+	var translateWidth = 0;
+	var slideInterval = 2000;
+	
+		function nextSlide() {
+    if (slideNow == slideCount || slideNow <= 0 || slideNow > slideCount) {
+        $('#slidewrapper').css('transform', 'translate(0, 0)');
+        slideNow = 1;
+    } else {
+        translateWidth = -$('#viewport').width() * (slideNow);
+        $('#slidewrapper').css({
+            'transform': 'translate(' + translateWidth + 'px, 0)',
+            '-webkit-transform': 'translate(' + translateWidth + 'px, 0)',
+            '-ms-transform': 'translate(' + translateWidth + 'px, 0)',
+        });
+        slideNow++;
+    }
+};
+		
+		
+		$('#next-btn').click(function() {
+	//alert('next');
+        nextSlide();
+    });
+
+    $('#prev-btn').click(function() {
+		alert('prev');
+       // prevSlide();
+		});
+	
+
+</script>	
 	
 	<div class="container">
 	<div class="col-sm-4">
