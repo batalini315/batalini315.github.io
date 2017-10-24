@@ -1,0 +1,24 @@
+#myslide {
+	width: 349px;	
+	height: 398px;
+	border: 3px solid black;
+	position: relative;
+	overflow: hidden; / обрезает все, что выходит за границы блока
+}
+#one, #two {
+	width: 349px;
+	height: 398px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	overflow: hidden; / обрезает все, что выходит за границы блока
+}
+#one{	
+	background: yellow;
+}
+#two{	
+	background: gray;
+}
+.border{
+	border: 2px  solid black;
+}

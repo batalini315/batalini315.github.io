@@ -55,3 +55,4 @@ function prevSlide2(){
 			slideNow++;
 		}
 	};
+	
