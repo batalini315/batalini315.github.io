@@ -53,7 +53,7 @@
         prevSlide2();
 		});
 		$('#next-btn').click(function() {
-        prevSlide2();
+        nextSlide2();
 		});
 		
 		$('#ener').click(function(){$('.as1').empty();}); // удаление содержимого .as1

@@ -1,4 +1,5 @@
 document.getElementById("myslide").onmousemove = function(event){
+	// два изображения в одном месте, показываются по перемещению мышки
 	var x= event.offsetX;// относительно родителя
 	document.getElementById("two").style.width= x + 'px';
 }
@@ -11,6 +12,8 @@ document.getElementById("myslide").onmousemove = function(event){
 	//}
 // }
 //document.getElementById("myslide").onmouseout= function(event){sdvig(event.offsetX);};
+
+// заполнение прогресса по заданному времени
 function userProgress(time){
 	var start=0;
 	var time  = time*10;
@@ -30,6 +33,7 @@ function userProgress(time){
 	},time);
 }
 userProgress(8);
+// рамка на рисунке по клику
 var blockimg=document.getElementById("mutyimg");
 blockimg.onclick= function(event){
 	console.log(event);
@@ -38,3 +42,7 @@ blockimg.onclick= function(event){
 		event.target.classList.add('border');
 	}
 }
+
+    
+        $('.header').load('header.html'); // загрузку HTML кода из файла example.html               
+    
