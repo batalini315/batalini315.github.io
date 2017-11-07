@@ -1,7 +1,5 @@
 
-prevSlide2(){
-	alert('sl2');
-}
+
 /*
 function prevSlide(){
 	alert('pref2");
