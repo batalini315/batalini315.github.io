@@ -44,5 +44,5 @@ blockimg.onclick= function(event){
 }
 
     
-        $('.header').load('../header.html'); // загрузку HTML кода из файла example.html               
+        $('.header').load('header.html'); // загрузку HTML кода из файла header.html               
     

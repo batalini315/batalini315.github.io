@@ -1,0 +1,44 @@
+﻿.conteiner  {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.products {
+	margin: 0 -1.5%;
+}
+.products .item {
+	width: 22%;
+	padding: 20px;
+	border: 1px dotted #000;
+	box-sizing: border-box; /* падинги считаются во внутрь */
+	text-align: center;
+	float: left;
+	margin: 1.5%;
+	transition: width 1s;
+	position: relative;
+	box-shadow: 0.4em 0.4em 3px rgba(122,122,122,0.5);
+}
+.item-height {
+	padding-top: 120%;
+}
+.iten-content {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.products .title {
+	font-weight: bold;
+}
+ .photo img {
+	width: 100%;
+}
+@media screen and (max-width:800px){
+	.products .item { width: 30%;}
+}
+@media screen and (max-width:600px){
+	.products .item { width: 44%;}
+}
+@media screen and (max-width:400px){
+	.products .item { width: 100%;}
+}

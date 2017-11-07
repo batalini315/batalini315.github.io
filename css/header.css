@@ -20,7 +20,7 @@ header {
 	 font-family: 'Lobster', cursive;
  }
 .container {
-	min-width: 1000px;
+	max-width: 1000px;
 	margin: 0 auto; /*по центру горизонтали*/ 
 }
 .nav {
@@ -45,6 +45,7 @@ header {
 	font-size: 20px;
 	margin-top: 20px;
 }
+.menuToH {display: none; color: #fff;}
 .button {
 	background: #fed136;
 	color: #484543;

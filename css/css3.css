@@ -1,0 +1,95 @@
+a:link    {color:blue; text-decoration:none}
+a:visited {color:pink; text-decoration:none}
+a:hover   {color:red; text-decoration:underline}
+a:active  {color:yellow; text-decoration:underline}
+body {
+	background-color: #5555ff;
+	color: #fff;
+}
+.clearfix:after,.line:after {
+	content:'';
+	display: block;
+	clear: both;
+}
+.fl {
+	float: left;
+}
+.wrapper, .wrapper2{
+	max-width: 1024px;
+	padding 0 30px;
+	margin: 0 auto;color: #000;
+	position: relative;
+}
+nav1, nav2 {background: #eee; }
+.menu1, .menu2{ list-style-type: none;}
+.menu1 li, .menu li {float: none;}
+.menu1 li a, .menu2 li a{
+	display:inline-block;
+	padding: 10px 15px;
+	
+}
+.menu1, .menu2 {
+	display: none;
+	float: none;
+	position: absolute;
+	background: #eee;
+	}
+.menuTo1, .menuTo2{ 
+	display: block;
+	cursor: pointer;
+	background: #eee;
+	text-align: center;
+}
+#menuCheck {
+	display: none;
+}
+#menuCheck:checked + .menu2{
+	display: block;
+}
+.relation {
+	background-color: red;
+	width: 100%;
+	position: relative;
+	}
+.relation_top {
+	padding-top: 56.25%;
+	height: 0;
+}
+.relation_item {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	
+}
+@media screen and (min-width:480px){
+	body {		
+		background-color: #fff;
+		color: #000;
+	}
+}
+@media screen and (min-width:600px){
+	body {		
+		background-color: #fff;
+		color: green;
+	}
+	.menuTo, .menuTo2 {display: none; padding: 10px 15px;}
+	.menu, .menu2 {
+		display: inline-block;
+	position: relative;
+	}
+	.wrapper {}
+	.menu li, .menu2 li {
+		float: left;		
+		}
+	.relation {
+		width: 70%;
+		margin: 0 auto;}	
+}
+@media screen and (min-width:900px){
+	body {		
+		background-color: #fff;
+		color: #555;
+	}
+}
