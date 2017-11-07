@@ -74,13 +74,13 @@ nav1, nav2 {background: #eee; }
 		background-color: #fff;
 		color: green;
 	}
-	.menuTo, .menuTo2 {display: none; padding: 10px 15px;}
-	.menu, .menu2 {
+	.menuTo1, .menuTo2 {display: none; padding: 10px 15px;}
+	.menu1, .menu2 {
 		display: inline-block;
 	position: relative;
 	}
 	.wrapper {}
-	.menu li, .menu2 li {
+	.menu1 li, .menu2 li {
 		float: left;		
 		}
 	.relation {
