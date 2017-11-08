@@ -15,7 +15,7 @@ function initJQ() {
   if (typeof(jQuery) == 'undefined') {
     if (!jQ) {
       jQ = true;
-      document.write('<scr' + 'ipt type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></scr' + 'ipt>');
+      document.write('<scr' + 'ipt type="text/javascript" src="js/jquery-3.2.1.min.js"></scr' + 'ipt>');
     }
     setTimeout('initJQ()', 50);
   } else {
