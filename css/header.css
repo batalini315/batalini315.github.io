@@ -12,6 +12,7 @@ body {
 header {
 	background: #fff url(../img/first-bg.jpg)  no-repeat center top / cover;
 	margin-bottom: 15px;
+	font-family: 'Ubuntu', sans-serif;
 }
  .logo h1{
 	 color: green;
@@ -26,6 +27,7 @@ header {
 .nav {
 	 float: right;
 	 padding-top: 30px;
+	 
  }
 .nav  .menu{
 	 padding: 0;
