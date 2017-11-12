@@ -1,0 +1,48 @@
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.wraper {
+	max-width: 1180px;
+	margin: 0 auto;
+	height: 100%;
+	padding: 0 5px;
+	overflow: hidden;
+}
+.row {
+	border: 1px solid #ff0;
+}
+.profit {
+	background: #232324;
+	padding: 15px 0;
+	
+}
+.profit .row {
+	display: flex;
+	flex-wrap: wrap ; /* в несколько строк*/
+/*	justify-content: center;// по центру строки
+*/
+	justify-content: space-around; /* равномерно по строке*/
+	/*justify-content: space-between; крайние прижимаются к границам*/
+} 
+.profit .item {
+	text-align: center;
+	flex-basis: 300px;
+	flex-grow:1; /* жадность - захват пустого места (1,2,3,4)*/
+	margin: 15px;
+	background: #999;
+}
+.profit .item .subtitle {
+	color: #ff5;
+	font-size: 1.5rem;
+	margin: 3px 0;
+}
+.profit .item .text {
+	color: #d94948;
+}
+@media screen and (max-width : 600px){
+	.profit .order1 {
+		order: -1; /* изменяет порядок вывода элементов */
+	}
+}
