@@ -22,9 +22,11 @@
 .border{
 	border: 2px  solid black;
 }
+/*
 header {
 	 background: url(../img/first-bg.jpg) no-repeat center top / cover;
  }
+ */
  .logo h1{
 	 color: #21220D;
 	 float:left;

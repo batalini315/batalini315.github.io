@@ -8,5 +8,5 @@ $(function(){
 			}
 		});
 	});
-	$('.header').load('header.html'); // загрузку HTML кода из файла header.html  
+	  
 });

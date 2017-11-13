@@ -22,34 +22,43 @@ header {
 	font-family: 'Ubuntu', sans-serif;
 	
 }
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
 header .container {
 	display: flex;
-	
+	align-items: center;
 	flex-wrap: wrap;
 	justify-content: space-between;
 }
 .logo {
-	flex: 1 1 auto;
+	flex-grow:1;
 	text-align: center;
-	align-items: center;
-	/*flex-basis: 250px;*/
+	
+	flex-basis: 250px;
 }
 .logo a{
 	 color: green;	 
 	 margin : 0;
 	 font-family: 'Lobster', cursive;
-	 font-size: 4rem;
+	 font-size: 44px;
+	 text-decoration: none;
  }
 
 .nav {
-	 flex: 1 1 auto;
+	 flex-grow:5;
+	 
 	 
 	 
  }
 .nav  .menu ul{
+	 margin: 0;
 	 display: flex;
 	 flex-wrap: wrap;
 	 list-style-type: none;
+	 justify-content: space-around; 
  }
 .nav .menu li{	
 	
@@ -60,7 +69,7 @@ header .container {
 	text-decoration: none;
 	text-transform: uppercase;
 	font-size: 20px;
-	margin-top: 20px;
+	
 }
 .menuToH {display: none; color: #fff;} 
 .button {
