@@ -1,0 +1,142 @@
+body {
+	margin0;
+}
+.content {
+	max-width: 1380px;
+	margin: 0 auto;
+	font-family: Century Gothic;
+	font-size: 38px;
+	text-align: center;
+	background-color: #f0f0f0;
+}
+.slide-title {
+	background-color: #fff;
+}
+.slide {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: center;
+	
+}
+.slide-img {
+	margin: 40px 35px 0 36px;
+}
+.title {
+	background-color: #f0f0f0;
+	/*height: 46px;*/
+    margin-top: -9px;
+	font-size: 18px;
+	padding: 13px 0;
+	text-transform: uppercase;
+ 
+}
+.left img, .right img {
+	margin: 36px;
+	cursor: pointer;
+}
+.point {
+	    
+	background-color: #fff;
+	padding-bottom: 66px;
+    padding-top: 4px;
+	display: flex;
+	justify-content: center;
+	cursor: pointer;
+}
+.point div {
+	width :20px;
+	height: 20px;
+	margin: 12px;
+	background: url('../img/point-n.png') no-repeat;
+}
+.point .active {
+	background: url('../img/point-a.png') no-repeat;
+}
+
+
+.items-images {
+	display: none;
+}
+
+.title-list {
+	margin-top: 36px;
+}
+.all-list {
+	
+		flex-wrap: wrap ;
+}
+.block-list {
+	display: flex;
+	justify-content: center;
+	    padding-left: 10px;
+	background: #fff url(../img/back-list.jpg)  no-repeat center top / cover;
+    padding-bottom: 155px;	
+		
+}
+.list {
+	
+	display: flex;
+	flex-direction: column;
+	font-size: 20px;
+	text-align: left;
+	    padding-left: 15px;
+		flex-basis: 430px;
+		    padding-top: 6px;
+}
+.list .text {
+	padding-top: 24px;
+}
+.list-text {
+	padding-top: 7px;
+}
+.list img {
+	float: left;
+}
+
+.video {
+	margin: 0 auto;
+	max-width: 1230px;
+	padding: 13px 0;
+}
+.title-video {
+	padding:20px;
+}
+.relation {
+	background-color: red;
+	width: 95%;
+	position: relative;
+	margin: 0 auto;
+	}
+.relation_top {
+	padding-top: 43.5%;
+	height: 0;
+}
+.relation_item {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	
+}
+.block-button {
+	padding : 40px;
+}
+.button {
+	background: #fed136;
+	color: #484543;
+	border-radius: 20px;
+	display: block;
+	width: 300px;
+	padding: 12px 0;
+	margin: 0 auto;    
+	text-align: center;
+	font-size: 15px;
+    font-weight: bold;
+	box-shadow: 0 0 16px rgba(255,206,0,1);
+	border-bottom: 2px solid #d4b624;
+}
+.wait  {
+	background-color: #fff;
+}

@@ -8,35 +8,30 @@
 <body>
 <!--a href="#" name="payment_info" class="info" onclick="infoblok(); return= false;"> <img class="sprite info-icon" src="/images/u81.PNG" alt="Подробнее" width="14" height="15"> </a-->
 
-<span name="payment_info" class="info" > <img class="sprite info-icon" src="/images/u81.PNG" alt="Подробнее" width="14" height="15"> </span>
-	
+<span name="payment_info" class="info" > <img class="sprite info-icon" src="/images/u81.PNG" alt="Продажа" width="14" height="15"> </span>
+	<span name="delivery_info" class="info" > <img class="sprite info-icon" src="/images/u81.PNG" alt="Доставка" width="14" height="15"> </span>
+	<span name="guarantee_info" class="info" > <img class="sprite info-icon" src="/images/u81.PNG" alt="Гарантия" width="14" height="15"> </span>
 <script>
 $(document).ready(function(){
-	var infotext={'payment_info':'Инфа <br> о покупках'};
-	$('.info').on('click', function(d){
-		alert(this.attributes[0]['name']);
-		$('.popup-delivery-content-inner').html(infotext.payment_info);
+	var infotext={'payment_info':'Инфа <br> о покупках','delivery_info':'Инфа <br> о доставке','guarantee_info':'Инфа <br> о гарантии',
+	};
+	$('.info').on('click', function(d){		
+		var ssd=$(this).attr('name');		
+		ssd=infotext[ssd];		
+		wiev_potap(ssd);
 		});
-	
-		/*
-	function infoblock(){
-		alert("infoblock");
-	};*/
-	
 });
+function wiev_potap(str){	
+	$('#popup').fadeIn(1200); // плавно открываем
+	$('.popup-delivery-content-inner').html(str);
+	$('#popup').fadeOut(1900); // скрыли
+}
 </script>
-<div style="position: absolute; z-index: 1000; top: 99px; left: 204px;">
-	<div id="delivery_popup" class="popup-delivery">
-		<div class="popup-css">
-			<a href="#" class="popup-close-medium-delivery" name="close">
-				<img src="https://i.rozetka.ua/design/_.gif" alt="×" class="popup-close-medium-icon sprite" width="18" height="18">
-			</a>
+<div id= "popup" style="position: absolute; z-index: 1000; top: 99px; left: 204px; display:none;">
+	<div  class="popup-delivery">
+		<div class="popup-css">			
 			<div class="popup-delivery-content">
-				<div class="popup-delivery-content-inner" name="content">
-					<div>
-						<p>Доставка товара производится со стороны продавца, имя которого вы можете увидеть на странице товара над блоком "Доставка".</p>
-						<p>Выбрать метод доставки вы можете при оформлении заказа.</p><br>
-					</div>  <br>
+				<div class="popup-delivery-content-inner" name="content">					
 				</div> 
 			</div> 
 		</div> 
@@ -73,10 +68,21 @@ $(document).ready(function(){
     background-position: -632px -833px;
     width: 27px;
     height: 27px;
+	background-image: url(https://i.rozetka.ua/h.b22018/sprite.svg) !important;
+    background-repeat: no-repeat;
 }
-.sprite, .sprite-both::after, .sprite-both::before, .sprite-side::before {
+.sprite {
     background-image: url(https://i.rozetka.ua/h.b22018/sprite.svg) !important;
     background-repeat: no-repeat;
+}
+.sprite::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 15px;
+    height: 8px;
+    z-index: 1;
+
 }
 .popup-delivery-content {
     position: relative;
@@ -103,7 +109,6 @@ delivery-content::before {
 
 
 .popup-delivery-content::after {
-
     bottom: 0;
     background: -webkit-linear-gradient(top,rgba(255,255,255,0),#fff 100%,#fff 10%,#fff);
     background: -ms-linear-gradient(top,rgba(255,255,255,0),#fff 100%,#fff 10%,#fff);
@@ -112,7 +117,6 @@ delivery-content::before {
 
 }
 .popup-delivery-content::after, .popup-delivery-content::before {
-
     position: absolute;
     content: '';
     left: 0;

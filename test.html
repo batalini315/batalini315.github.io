@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test  info@webcat.by</title>
+	<link rel="stylesheet" href="css/test-style.css">
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script> 
+</head>
+<body>
+	<div class="content">
+	<div id="carousel" class="carousel slide">
+	
+	</div>
+	<div class="slide-title">Результаты</div> 
+		<div class="slide wait">
+		
+			<div class="left">
+				<img src="img/left-ico.png" alt="">
+			</div>
+			<div class="slide-img">
+				<div class="first">
+					
+				</div>
+			</div>
+			
+			<div class="slide-img">
+				<div class="twenty">
+					
+				</div>
+			</div>	
+			
+				<div class="right">
+					<img src="img/r-ico.png" alt="">
+				</div>
+				
+		</div>
+		<div class="point">  </div>
+		<div class="items-images">
+			<img src="img/g1.jpg" alt="первый">
+			<img src="img/g2.jpg" alt="второй">
+			<img src="img/g3.jpg" alt="третий">
+			<img src="img/g4.jpg" alt="четвертый">
+		</div>
+		
+		<div class="title-list">Основные причины выпадения волос</div>
+		<div class="block-list">
+			<div class="list">
+			
+				<div class="text">
+					<div class="icon">
+						<img src="img/flash.png" alt="">
+						<div class="list-text">Стресс</div>
+					</div>
+				</div>
+				<div class="text">
+					<div class="icon">
+						<img src="img/apple.png" alt="">
+						<div class="list-text">Диеты</div>
+					</div>
+				</div>
+				<div class="text">
+					<div class="icon">
+						<img src="img/fe.png" alt="">
+						<div class="list-text">Дефицит железа</div>
+					</div>
+				</div>
+				<div class="text">
+					<div class="icon">
+						<img src="img/balance.png" alt="">
+						<div class="list-text">Гармональные расстройства</div>
+					</div>
+				</div>
+				<div class="text">
+					<div class="icon">
+						<img src="img/head-and-neck.png" alt="">
+						<div class="list-text">Расстройство щитовидной железы</div>
+					</div>
+				</div>
+			</div>
+			<div class="list">
+				<div class="text">
+					<div class="icon">
+						<img src="img/plant.png" alt="">
+						<div class="list-text">Экология</div>
+					</div>
+				</div>
+				<div class="text">
+					<div class="icon">
+						<img src="img/raindrop.png" alt="">
+						<div class="list-text">Чистое мытье волос</div>
+					</div>
+				</div>
+				<div class="text">
+					<div class="icon">
+						<img src="img/inclined-bottle.png" alt="">
+						<div class="list-text">Агресивные шампуни</div>
+					</div>
+				</div>
+				<div class="text">
+					<div class="icon">
+						<img src="img/hair-dryer.png" alt="">
+						<div class="list-text">Использование фена и красителей</div>
+					</div>
+				</div>
+				<div class="text">
+					<div class="icon">
+						<img src="img/fetus.png" alt="">
+						<div class="list-text">Беременность</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wait">
+			<div class="video">
+				<div class="title-video">Посмотрите видео</div>
+				<div class="relation">
+				<div class="relation_top"></div>
+				<iframe class="relation_item" src="https://www.youtube.com/embed/MwD_tZGc7gA"  allowfullscreen></iframe>		
+			</div>
+		</div>
+		</div>
+		<div class="block-button wait">
+		<div class="button">Заказать шампунь и тоник Parusan</div>
+		</div>
+	</div>
+	<script>
+	$(document).ready(function(){
+		var num_img=1;
+		var last_img= $('.items-images img:last').index();
+		var last_point=Math.round(last_img/2);
+		
+		for (var i = 0; i < last_point; i++) {
+			$('.point').append('<div name="'+i+'"></div>');   
+			}
+			$('.point div').eq(Math.round(num_img/2)-1).addClass('active');
+
+		vivod(num_img);
+		$('.left').on('click', function(){			 
+			 if(num_img<= last_img-2){	//alert('fff2');		 
+				num_img = num_img+2;
+				vivod(num_img);
+			 }
+		});
+		$('.right').on('click', function(){	;
+			 if(num_img-2>= 0){	//alert('fff2');		 
+				num_img = num_img-2;
+				vivod(num_img);
+			 }
+		});
+		$(".point").on('click', 'div', function (event) {			
+			num_img=$(this).attr('name')*2+1;
+			vivod(num_img);
+		});
+	
+		function vivod(num){
+		var img;
+		var title='';
+			img= $('.items-images img').eq(num-1).attr('src');
+			title= $('.items-images img').eq(num-1).attr('alt');
+			$('.first').html('<img src="'+img+'"> <div class="title">'+title+'</div>');
+			img= $('.items-images img').eq(num).attr('src');
+			title= $('.items-images img').eq(num).attr('alt');
+			$('.twenty').html('<img src="'+img+'"> <div class="title">'+title+'</div>');
+			$('.point .active').removeClass('active');
+			$('.point div').eq(Math.round(num_img/2)-1).addClass('active');
+		}
+	});
+	
+	</script>
+	
+</body>
+</html>
