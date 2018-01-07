@@ -4,7 +4,8 @@
 	<meta charset="UTF-8">
 	<title>Test  info@webcat.by</title>
 	<link rel="stylesheet" href="css/test-style.css">
-	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script> 
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.maskedinput.js"></script>
 </head>
 <body>
 	<div class="content">
@@ -120,7 +121,7 @@
 		</div>
 		</div>
 		<div class="block-button wait">
-		<div class="button">Заказать шампунь и тоник Parusan</div>
+		<div class="button" id="myBtn">Заказать шампунь и тоник Parusan</div>
 		</div>
 	</div>
 	<script>
@@ -164,9 +165,54 @@
 			$('.point .active').removeClass('active');
 			$('.point div').eq(Math.round(num_img/2)-1).addClass('active');
 		}
+		$('#myBtn').on('click', function(){
+			$('#myModal').css('display',"block");
+		});
+		$('.close').on('click', function(){
+			$('#myModal').css('display',"none");
+		});
+			$('#myModal').on('click',
+				function(event){
+				if (event.target == document.getElementById('myModal')) {$('#myModal').css('display',"none");}
+					});
+	$("#phone").mask("+375(99) 999-99-99");
 	});
 	
 	</script>
+	<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    
+	<form action="#">
+	<div class="label">Телефон</div>
+		<input type="tel" name="phone" id='phone'  placeholder="+375 (99) 999-99-99"><br><br>
+	<div class="label">Имя</div>	
+		<input type="name" name="name"><br><br>
+		<button class="button" onclick="test_mail(); return false;">заказать шампунь и тоник parusan</button>
+	</form>
+    
+  </div>
+  <script>
+  // When the user clicks anywhere outside of the modal, close it
+
+
+  function test_mail(){
+	var phone, name;
+	phone=$('#phone').val();
+	name=$('[name=\'name\']').val();
+	if(!phone) {$('#phone').css('border-color','red');}
+	else {
+	$('#phone').css('border-color','initial');	
+		alert('Отправка е-mail с данными '+phone+' , '+name);
+		$('#myModal').css('display',"none");
+	}
 	
+  
+  };
+  </script>
+
+</div>
 </body>
 </html>
