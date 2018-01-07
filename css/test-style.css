@@ -68,6 +68,7 @@ body {
 }
 .block-list {
 	display: flex;
+	flex-wrap:wrap;
 	justify-content: center;
 	    padding-left: 10px;
 	background: #fff url(../img/back-list.jpg)  no-repeat center top / cover;
@@ -128,7 +129,7 @@ body {
 	color: #484543;
 	border-radius: 20px;
 	display: block;
-	width: 300px;
+	max-width: 300px;
 	padding: 12px 0;
 	margin: 0 auto;    
 	text-align: center;
